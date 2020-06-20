@@ -1,0 +1,44 @@
+{
+  "name": "synkronized",
+  "version": "1.0.0",
+  "description": "An interface / implementation for mutexing stuff",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "nyc mocha --require ts-node/register test/**/*.test.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Floby/synkronized.git"
+  },
+  "keywords": [
+    "mutex",
+    "synchronized",
+    "synchronised",
+    "lock",
+    "distributed",
+    "lock",
+    "locking",
+    "race",
+    "condition"
+  ],
+  "author": "Florent Jaby <florent.jaby@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Floby/synkronized/issues"
+  },
+  "homepage": "https://github.com/Floby/synkronized#readme",
+  "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/chai-as-promised": "^7.1.2",
+    "@types/debug": "^4.1.5",
+    "@types/mocha": "^7.0.2",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "coveralls": "^3.1.0",
+    "debug": "^4.1.1",
+    "mocha": "^8.0.1",
+    "nyc": "^15.1.0",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5"
+  }
+}
