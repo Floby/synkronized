@@ -27,6 +27,9 @@
     "url": "https://github.com/Floby/synkronized/issues"
   },
   "homepage": "https://github.com/Floby/synkronized#readme",
+  "dependencies": {
+    "debug": "^4.1.1"
+  },
   "devDependencies": {
     "@types/chai": "^4.2.11",
     "@types/chai-as-promised": "^7.1.2",
@@ -35,7 +38,6 @@
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "coveralls": "^3.1.0",
-    "debug": "^4.1.1",
     "mocha": "^8.0.1",
     "nyc": "^15.1.0",
     "ts-node": "^8.10.2",
