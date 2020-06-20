@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "An interface / implementation for mutexing stuff",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "nyc mocha --require ts-node/register test/**/*.test.ts"
+    "build": "rm -rf dist && tsc",
+    "prepublish": "npm run build",
+    "test": "nyc mocha --require ts-node/register test/**/*.test.ts",
+    "test:watch": "mocha --require ts-node/register test/**/*.test.ts --watch --watch-files test/**/*.ts src/**/*.ts"
   },
   "repository": {
     "type": "git",
@@ -27,19 +31,40 @@
     "url": "https://github.com/Floby/synkronized/issues"
   },
   "homepage": "https://github.com/Floby/synkronized#readme",
+  "nyc": {
+    "include": [
+      "src/**/*.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "reporter": [
+      "text-summary",
+      "html"
+    ],
+    "sourceMap": true,
+    "instrument": true
+  },
   "dependencies": {
-    "debug": "^4.1.1"
+    "debug": "^4.1.1",
+    "shortid": "^2.2.15"
   },
   "devDependencies": {
     "@types/chai": "^4.2.11",
     "@types/chai-as-promised": "^7.1.2",
     "@types/debug": "^4.1.5",
     "@types/mocha": "^7.0.2",
+    "@types/node": "^14.0.13",
+    "@types/shortid": "0.0.29",
+    "@types/sinon": "^9.0.4",
+    "@types/sinon-chai": "^3.2.4",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "coveralls": "^3.1.0",
     "mocha": "^8.0.1",
     "nyc": "^15.1.0",
+    "sinon": "^9.0.2",
+    "sinon-chai": "^3.5.0",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.5"
   }
